@@ -21,7 +21,7 @@ void resizeConsole(int width, int height)
 }
 
 //hàm vẽ khung
-void DrawBorder (int x, int y, int width, int height){
+void DrawBorder(int x, int y, int width, int height){
 	//vẽ góc trái trên
 		GotoXY(x - 1,y - 1);
 		cout<<static_cast<char>(218);
@@ -73,4 +73,12 @@ void GotoXY(int x, int y)
 	coord.X = x;
 	coord.Y = y;
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+}
+
+//hàm tô màu
+void TextColor(int x)
+{
+	HANDLE mau;
+	mau = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(mau, x);
 }

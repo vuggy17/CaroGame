@@ -8,3 +8,5 @@ int _COMMAND; //phim nhap vao
 int _X; //tim vi tri hien hanh con tro o toa do X
 int _Y; //tim vi tri hien hanh con tro o toa do Y
 _POINT _A[BOARD_SIZE][BOARD_SIZE];
+_PLAYERINFO player1;
+_PLAYERINFO player2;

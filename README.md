@@ -1,6 +1,6 @@
 # Caro Game
 19/2/2020 - .....
-Người thực hiện: Nguyễn Hoàng Long, 
+Người thực hiện: Nguyễn Hoàng Long, ????
 
 ## Usage
 ```bash
