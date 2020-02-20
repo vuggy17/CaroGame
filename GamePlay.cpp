@@ -7,7 +7,7 @@ int main(){
     system("cls");
     ResetData();
     while(1){
-        bool validEnter = true;//hàm kiểm tra xem có được bấm phím enter hay không, trường hợp đánh vào ô đã đánh thì validenter = false -> ko cho enter đánh vào đó
+        bool validEnter = true;//biến kiểm tra xem có được bấm phím enter hay không, trường hợp đánh vào ô đã đánh thì validenter = false -> ko cho enter đánh vào đó
         _COMMAND = getch();//nhận giá trị khi bấm phím W A S D hoặc enter, biến này đc khai báo ở Data.cpp
         if (_COMMAND == 27) {
             return 0;

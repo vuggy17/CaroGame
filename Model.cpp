@@ -12,14 +12,15 @@ void ResetData(){
             //dinh nhu sau: -1 la luot true danh, 1 là luot false danh
         }
     }
-    //DrawBoard(BOARD_SIZE);
-    //BoderBoard();
 	player1 = { "Player_One", "X" };
 	player2 = { "Player_Two", "O" };
+    DrawBorder ((LEFT - 3), (TOP - 1), (4 * BOARD_SIZE + 6), (2 * BOARD_SIZE + 3));  // x,y, width, hieh
+    DrawBoard(BOARD_SIZE);
     _TURN = true;
 	_COMMAND = -1;// Gan luot ve phim mac dinh
     _X = _A[0][0].x;
 	_Y = _A[0][0].y;
+	GotoXY(_X,_Y);
 }
 
 //ham kiem tra luot nguoi choi khi nhan ENTER de danh dau

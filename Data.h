@@ -4,10 +4,10 @@
 #include "GamePlay.h"
 using namespace std;
 
-#define BOARD_SIZE 12
+#define BOARD_SIZE 12 // kích thước bàn cờ
 #define LEFT 5
 #define TOP 3
-#define xSizeConsole 1000
+#define xSizeConsole 2000
 #define ySizeConsole 600
 extern bool _TURN;
 extern int _COMMAND;
@@ -22,8 +22,6 @@ struct _PLAYERINFO
 	string playerName;
 	string playerSymbol;
 };
-
-
 extern _POINT _A[BOARD_SIZE][BOARD_SIZE];
 extern _PLAYERINFO player1,player2;// người chơi 1 và người chơi 2
 
