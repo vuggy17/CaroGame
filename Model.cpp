@@ -12,6 +12,9 @@ void ResetData(){
             //dinh nhu sau: -1 la luot true danh, 1 là luot false danh
         }
     }
+    DrawBorder ((LEFT - 3), (TOP - 1), (4 * BOARD_SIZE + 6), (2 * BOARD_SIZE + 3));  // x,y, width, hieh
+    DrawBoard(BOARD_SIZE);
+    GotoXY(_X,_Y);
     _TURN = true;
 	_COMMAND = -1;// Gan luot ve phim mac dinh
     _X = _A[0][0].x;

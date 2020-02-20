@@ -3,7 +3,7 @@
 
 #include<iostream>
 #include<string>
-#include<bits/stdc++.h>
+//#include<bits/stdc++.h>
 #include<conio.h>
 #include<windows.h>
 
