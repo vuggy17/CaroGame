@@ -20,6 +20,17 @@ void resizeConsole(int width, int height)
 	MoveWindow(console, r.left, r.top, width, height, TRUE);
 }
 
+//Hàm vẽ bàn cờ
+void DrawBoard(int pSize){
+	for(int i = 0; i<= pSize; i++){
+		for (int  j = 0; j <= pSize; j++)
+		{
+			GotoXY(LEFT + 4*i, TOP + 2*i);
+			printf(".");
+		}
+		
+	}
+}
 
 //ham di chuyen con tro
 void GotoXY(int x, int y)

@@ -7,6 +7,7 @@ int main(){
     FixConsoleWindow();//cố định màn hình console, ko cho kéo chuột lên kéo xuống
     system("cls");
     ResetData();
+    DrawBoard(12);
     while(1){
         bool validEnter = true;
         _COMMAND = getch();//nhận giá trị khi bấm phím W A S D hoặc enter, biến này đc khai báo ở Data.cpp
