@@ -17,8 +17,14 @@ struct _POINT
 {
 	int x, y, c;
 };
+struct _PLAYERINFO
+{
+	string playerName;
+	string playerSymbol;
+};
 
 
 extern _POINT _A[BOARD_SIZE][BOARD_SIZE];
+extern _PLAYERINFO player1,player2;// người chơi 1 và người chơi 2
 
 #endif
