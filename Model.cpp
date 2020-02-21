@@ -46,6 +46,24 @@ int CheckBoard(int pX, int pY){
 	return 0;
 }
 
+int TestBoard(){
+	if(WinGame())//<- hàm win game truyền vào đây WinGame(), WinGame là hàm check thắng thua
+		return (_TURN) ? -1 : 1;
+	else if (BoardFull())//<- hàm BoardFull() kiểm tra ma trận đầy, cái này t làm
+		return 0;
+	else
+		return 2;//nếu chưa ai thắng thua hay ma trận chưa đầy
+}
+
+int WinGame(){
+	//Viết check thắng thua vào đây
+	return 0;
+}
+int BoardFull(){
+	//Viết ktra ma trận đầy vào đây
+	return 0;
+}
+
 int ExitGame()
 {
 	return 0;

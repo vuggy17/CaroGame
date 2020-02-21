@@ -32,7 +32,23 @@ int main(){
                         break;
                 }
                 if(validEnter == true){
-                    _TURN = !(_TURN); //đổi lượt cho người chơi còn lại
+                    switch(TestBoard()){
+                        case -1: 
+                            system("cls");
+                            cout << player1.playerName << endl; //người chơi 1 thắng
+                            ExitGame();
+                        case 1:
+                            system("cls");
+                            cout << player2.playerName << endl; //người chơi 2 thắng
+                            ExitGame();
+                        case 0:
+                            system("cls");
+                            cout << "Hoa" << endl;
+                            ExitGame();
+                        default:
+                            _TURN = !(_TURN); //đổi lượt cho người chơi còn lại
+                            break;
+                    }
                 }
             }
         }
