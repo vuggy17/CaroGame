@@ -14,8 +14,9 @@ void ResetData(){
     }
 	player1 = { "Player_One", "X" };
 	player2 = { "Player_Two", "O" };
-    DrawBorder ((LEFT - 3), (TOP - 1), (4 * BOARD_SIZE + 6), (2 * BOARD_SIZE + 3));  // x,y, width, hieh
-    DrawBoard(BOARD_SIZE);
+	DrawBoard(BOARD_SIZE);
+    DrawBorder ((LEFT - 3), (TOP - 1), (4 * BOARD_SIZE + 6), (2 * BOARD_SIZE + 3));  // x,y, width, hight hàm này vẽ khung bên trái
+	DrawBorder_1(70,2,54,27);// hàm này vẽ khung bên phải
     _TURN = true;
 	_COMMAND = -1;// Gan luot ve phim mac dinh
     _X = _A[0][0].x;

@@ -7,7 +7,7 @@ using namespace std;
 #define BOARD_SIZE 12 // kích thước bàn cờ
 #define LEFT 5
 #define TOP 3
-#define xSizeConsole 2000
+#define xSizeConsole 1200
 #define ySizeConsole 600
 extern bool _TURN;
 extern int _COMMAND;
