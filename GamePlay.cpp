@@ -20,9 +20,11 @@ int main(){
             else if (_COMMAND == 13){ //13 là phím enter
                 switch (CheckBoard(_X, _Y)){
                     case -1: //_TURN = true, người chơi 1
+                        TextColor(12);
                         cout << player1.playerSymbol;
                         break;
                     case 1: //_TURN = false, người chơi 2
+                        TextColor(10);
                         cout << player2.playerSymbol;
                         break;
                     case 0:
