@@ -55,14 +55,21 @@ int TestBoard(){
 		return 2;//nếu chưa ai thắng thua hay ma trận chưa đầy
 }
 
-int WinGame(){
-	//Viết check thắng thua vào đây
-	return 0;
+
+//ham kiem tra ma tran day ?
+bool BoardFull() {
+	int isFull = 0;
+	for (int i = 0; i < BOARD_SIZE; i++)
+	{
+		for (int j = 0; j < BOARD_SIZE; j++)
+		{
+			if (_A[i][j].c == 0) return false;
+		}
+	}
+
+	return true;
 }
-int BoardFull(){
-	//Viết ktra ma trận đầy vào đây
-	return 0;
-}
+
 
 int ExitGame()
 {
