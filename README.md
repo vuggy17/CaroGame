@@ -1,5 +1,5 @@
 # Caro Game
-19/2/2020 - .....
+19/2/2020 - .....<br />
 Người thực hiện: Nguyễn Hoàng Long, Vũ Đặng Khương Duy.
 
 ## Usage
