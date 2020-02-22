@@ -47,21 +47,68 @@ int CheckBoard(int pX, int pY){
 }
 
 int TestBoard(){
-	if(WinGame())//<- hàm win game truyền vào đây WinGame(), WinGame là hàm check thắng thua
+	if(WinGame()){//<- hàm win game truyền vào đây WinGame(), WinGame là hàm check thắng thua
 		return (_TURN) ? -1 : 1;
+	}
 	else if (BoardFull())//<- hàm BoardFull() kiểm tra ma trận đầy, cái này t làm
-		return 0;
+	 	return 0;
 	else
 		return 2;//nếu chưa ai thắng thua hay ma trận chưa đầy
 }
+// int check_ngang(int a, int b)
+// {
+// 	int count = 1;
+// 	int x = a + 4;
+// 	while(x <= BOARD_SIZE && _A[x][b].c == _A[a][b].c){
+// 		count++;
+// 		cout<< _A[x][b].c<< _A[a][b].c;
+// 		x = x + 4;
+// 		if(count == 5) return 1;
+// 	}
+// 	x = a - 4;
+// 	while(x >= 0 && _A[x][b].c == _A[a][b].c){
+// 		count++;
+// 		x = x + 4;
+// 		if(count == 5) return 1;
+// 	}
+// 	return 0;
+// 	//return (count == 5) ? 1 : 0;
+// }
 
-int WinGame(){
-	//Viết check thắng thua vào đây
-	return 0;
+bool WinGame(){
+	int current_y, current_x;
+	bool tag = false;
+	for (int i = 0;i < BOARD_SIZE;i++) {
+		for (int j = 0; j < BOARD_SIZE; j++) {
+			if (_A[i][j].x == _X && _A[i][j].y == _Y) {
+				current_y = i;
+				current_x = j;
+				tag = true;
+				break;
+			}
+		}
+		if(tag)
+			break;
+	}
+	// tim vi tri hien hanh cua con tro dang o ô nao tren ma tran 
+	// lay toa do dong` cua no la current_y ung voi i 
+	// roi tu ô do xet 4 con ke tiep
+
+	for(int i = 0;i <= 7;i++){
+		if(abs(_A[current_y][i].c + _A[current_y][i + 1].c + _A[current_y][i + 2].c + _A[current_y][i + 3].c + _A[current_y][i + 4].c) == 5)
+			return true;
+	}
+	return false;
+	// if(check_ngang(_X,_Y) == 1 )
+	// 	return 2;
+	// else
+	// 	return 0;
+	
+
 }
-int BoardFull(){
+bool BoardFull(){
 	//Viết ktra ma trận đầy vào đây
-	return 0;
+	return false;
 }
 
 int ExitGame()

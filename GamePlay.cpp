@@ -36,7 +36,8 @@ int main(){
                         case -1: 
                             system("cls");
                             cout << player1.playerName << endl; //người chơi 1 thắng
-                            ExitGame();
+                            //ExitGame();
+                            return 0;
                         case 1:
                             system("cls");
                             cout << player2.playerName << endl; //người chơi 2 thắng
