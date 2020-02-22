@@ -140,3 +140,14 @@ void TextColor(int x)
 	mau = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleTextAttribute(mau, x);
 }
+
+//hàm ẩn con trỏ nhấp nháy trên màn hình , nguon tham khao: https://daynhauhoc.com/t/an-con-tro-chuot-tren-man-hinh-console/34411
+void Nocursortype(bool isHide)
+{
+	
+		CONSOLE_CURSOR_INFO Info;
+		Info.bVisible = !isHide;
+		Info.dwSize = 20;
+		SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &Info);
+	
+}

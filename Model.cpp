@@ -104,12 +104,21 @@ bool WinGame(){
 	// else
 	// 	return 0;
 	
-
 }
+//ham kiem tra ma tran day ?
 bool BoardFull(){
-	//Viết ktra ma trận đầy vào đây
-	return false;
+	int isFull = 0;
+	for (int i = 0; i < BOARD_SIZE; i++)
+	{
+		for (int j = 0; j < BOARD_SIZE; j++)
+		{
+			if (_A[i][j].c == 0) return false;
+		}
+	}
+	return true;
 }
+
+
 
 int ExitGame()
 {
