@@ -1,6 +1,7 @@
 #include "GamePlay.h"
 using namespace std;
 
+int count1 = 0, count2 = 0;
 int main(){
     resizeConsole(xSizeConsole,ySizeConsole); //hàm chỉnh kích thước màn hình console theo độ rộng và chiều cao
     FixConsoleWindow();//cố định màn hình console, ko cho kéo chuột lên kéo xuống
@@ -22,6 +23,9 @@ int main(){
                     case -1: //_TURN = true, người chơi 1
                         TextColor(12);
                         cout << player1.playerSymbol;
+                        // GotoXY(83,23);
+                        // cout<< player1.playerSymbo<<endl<<count1++;
+                        // GotoXY(_X,_Y);
                         break;
                     case 1: //_TURN = false, người chơi 2
                         TextColor(10);
@@ -41,7 +45,8 @@ int main(){
                         case 1:
                             system("cls");
                             cout << player2.playerName << endl; //người chơi 2 thắng
-                            ExitGame();
+                            //ExitGame();
+                            return 0;
                         case 0:
                             system("cls");
                             cout << "Hoa" << endl;
