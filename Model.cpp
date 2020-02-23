@@ -55,26 +55,7 @@ int TestBoard(){
 	else
 		return 2;//nếu chưa ai thắng thua hay ma trận chưa đầy
 }
-// int check_ngang(int a, int b)
-// {
-// 	int count = 1;
-// 	int x = a + 4;
-// 	while(x <= BOARD_SIZE && _A[x][b].c == _A[a][b].c){
-// 		count++;
-// 		cout<< _A[x][b].c<< _A[a][b].c;
-// 		x = x + 4;
-// 		if(count == 5) return 1;
-// 	}
-// 	x = a - 4;
-// 	while(x >= 0 && _A[x][b].c == _A[a][b].c){
-// 		count++;
-// 		x = x + 4;
-// 		if(count == 5) return 1;
-// 	}
-// 	return 0;
-// 	//return (count == 5) ? 1 : 0;
-// }
-
+// ham kiem tra thang(true)/ thua(false)
 bool WinGame(){
 	int current_y, current_x;
 	bool tag = false;
@@ -98,12 +79,47 @@ bool WinGame(){
 		if(abs(_A[current_y][i].c + _A[current_y][i + 1].c + _A[current_y][i + 2].c + _A[current_y][i + 3].c + _A[current_y][i + 4].c) == 5)
 			return true;
 	}
+	for(int i = 0;i <= 7;i++){
+		if(abs(_A[i][current_x].c + _A[i + 1][current_x].c + _A[i + 2][current_x].c + _A[i + 3][current_x].c + _A[i + 4][current_x].c ) == 5)
+			return true;
+	}
+	// kiem tra duong cheo chinh
+	int count = 1;
+	int x = current_y + 1;
+	int y = current_x + 1;
+	while(x <= BOARD_SIZE && y <= BOARD_SIZE && _A[current_y][current_x].c == _A[x][y].c){
+		count++;
+		x++;
+		y++;
+		if(count == 5) return true;
+	}
+	x = current_y - 1;
+	y = current_x - 1;
+	while(x >= 0 && y >= 0 && _A[current_y][current_x].c == _A[x][y].c){
+		count++;
+		x--;
+		y--;
+		if(count == 5) return true;
+	}
+	// kiem tra duong cheo phu
+	count = 1;
+	x = current_y + 1;
+	y = current_x - 1;
+	while(x <= BOARD_SIZE && y >= 0 &&  _A[current_y][current_x].c == _A[x][y].c){
+		count++;
+		x++;
+		y--;
+		if(count == 5) return true;
+	}
+	x = current_y - 1;
+	y = current_x + 1;
+	while(x >= 0 && y <= BOARD_SIZE &&  _A[current_y][current_x].c == _A[x][y].c){
+		count++;
+		x--;
+		y++;
+		if(count == 5) return true;
+	}
 	return false;
-	// if(check_ngang(_X,_Y) == 1 )
-	// 	return 2;
-	// else
-	// 	return 0;
-	
 }
 //ham kiem tra ma tran day ?
 bool BoardFull(){
@@ -117,7 +133,6 @@ bool BoardFull(){
 	}
 	return true;
 }
-
 
 
 int ExitGame()
