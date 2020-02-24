@@ -71,10 +71,6 @@ bool WinGame(){
 		if(tag)
 			break;
 	}
-	// tim vi tri hien hanh cua con tro dang o ô nao tren ma tran 
-	// lay toa do dong` cua no la current_y ung voi i 
-	// roi tu ô do xet 4 con ke tiep
-
 	for(int i = 0;i <= 7;i++){
 		if(abs(_A[current_y][i].c + _A[current_y][i + 1].c + _A[current_y][i + 2].c + _A[current_y][i + 3].c + _A[current_y][i + 4].c) == 5)
 			return true;

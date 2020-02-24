@@ -151,3 +151,11 @@ void Nocursortype(bool isHide)
 		SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &Info);
 	
 }
+
+//hàm hỗ trợ rút gọn code goto xy, set màu
+void printWord(int Color, int x, int y, string name)
+{
+	TextColor(Color);
+	GotoXY(x, y);
+	cout << name;
+}
