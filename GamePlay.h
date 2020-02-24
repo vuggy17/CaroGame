@@ -3,7 +3,6 @@
 
 #include<iostream>
 #include<string>
-//#include<bits/stdc++.h>
 #include<conio.h>
 #include<windows.h>
 
@@ -12,5 +11,6 @@
 #include "Menu.h"
 #include "Data.h"
 #include "Control.h"
+#include "Screen.h"
 
 #endif
