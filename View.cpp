@@ -159,3 +159,69 @@ void printWord(int Color, int x, int y, string name)
 	GotoXY(x, y);
 	cout << name;
 }
+
+//hàm hỗ trợ tô màu con trỏ nhấp nháy trên bàn cờ
+void setColorPtr(int x, int y, int value){
+	int i,j,ex = 0;
+
+	for (i = 0; i < BOARD_SIZE; i++)
+	{
+		for (j = 0; j < BOARD_SIZE; j++)
+		{
+			if (_A[i][j].x == x && _A[i][j].y == y)
+			{
+				ex = 1;
+				break;
+			}
+		}
+		if (ex == 1) break;
+	}
+
+	if (_A[i][j].c == 0) TextColor(15);
+	else if (_A[i][j].c == 1) TextColor(10);
+	else TextColor(12);
+
+	if (value)
+	{
+		char topLeft = 201, topCenter = 205, topRight = 187, bottomLeft = 200, bottomRight = 188, bottomCenter = 205, rightCenter = 186, leftCenter = 186;
+		GotoXY(LEFT + 4 * j, TOP + 2 * i);
+		cout << topLeft << topCenter << topCenter << topCenter;
+
+		GotoXY(LEFT + 4 * j, TOP + 2 * i + 1);
+		cout << leftCenter;
+
+		GotoXY(LEFT + 4 * (j + 1), TOP + 2 * i);
+		cout << topRight;
+		GotoXY(LEFT + 4 * j, TOP + 2 * (i + 1));
+		cout << bottomLeft << bottomCenter << bottomCenter << bottomCenter;
+		GotoXY(LEFT + 4 * (j + 1), TOP + 2 * (i + 1));
+		cout << bottomRight;
+
+		GotoXY(LEFT + 4 * (j + 1), TOP + 2 * i + 1);
+		cout << rightCenter;
+	}
+	else
+	{
+		TextColor(15);
+		GotoXY(LEFT + 4 * j, TOP + 2 * i);
+		cout << ".   ";
+
+		GotoXY(LEFT + 4 * j, TOP + 2 * i + 1);
+		cout << " ";
+
+		GotoXY(LEFT + 4 * (j + 1), TOP + 2 * i);
+		cout << ".";
+		GotoXY(LEFT + 4 * j, TOP + 2 * (i + 1));
+		cout << ".   ";
+		GotoXY(LEFT + 4 * (j + 1), TOP + 2 * (i + 1));
+		cout <<".";
+
+		GotoXY(LEFT + 4 * (j + 1), TOP + 2 * i + 1);
+		cout << " ";
+
+	}
+	COORD coord;
+	coord.X = x;
+	coord.Y = y;
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+}
