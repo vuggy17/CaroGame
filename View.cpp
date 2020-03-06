@@ -160,7 +160,7 @@ void printWord(int Color, int x, int y, string name)
 	cout << name;
 }
 
-//hàm tạo khung viền cho con trỏ nhấp nháy trên bàn cờ
+//hàm hỗ trợ tô màu con trỏ nhấp nháy trên bàn cờ
 void setColorPtr(int x, int y, int value){
 	int i,j,ex = 0;
 
