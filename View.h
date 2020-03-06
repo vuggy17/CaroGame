@@ -14,5 +14,4 @@ void DrawBorder_1 (int x, int y, int width, int height);
 void printWord(int Color, int x, int y, string name);
 void Nocursortype(bool isHide);
 void setColorPtr(int x, int y, int value);
-
 #endif
