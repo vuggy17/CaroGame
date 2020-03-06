@@ -122,14 +122,14 @@ int playScreen(){
             else if (_COMMAND == 13){ //13 là phím enter
                 switch (CheckBoard(_X, _Y)){
                     case -1: //_TURN = true, người chơi 1
-                        TextColor(12);
+                        setColorPtr(_X, _Y, 1);
                         cout << player1.playerSymbol;
                         // GotoXY(83,23);
                         // cout<< player1.playerSymbo<<endl<<count1++;
                         // GotoXY(_X,_Y);
                         break;
                     case 1: //_TURN = false, người chơi 2
-                        TextColor(10);
+                        setColorPtr(_X, _Y, 1);
                         cout << player2.playerSymbol;
                         break;
                     case 0:
