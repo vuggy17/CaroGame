@@ -77,7 +77,7 @@ bool WinGame(){
 	}
 	for(int i = 0;i <= 7;i++){
 		if(abs(_A[i][current_x].c + _A[i + 1][current_x].c + _A[i + 2][current_x].c + _A[i + 3][current_x].c + _A[i + 4][current_x].c ) == 5)
-			return true;
+			return true;	
 	}
 	// kiem tra duong cheo chinh
 	int count = 1;

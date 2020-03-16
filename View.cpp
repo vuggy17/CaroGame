@@ -105,6 +105,8 @@ void DrawBorder_1(int x, int y, int width, int height){
 	//vẽ dấu nối chính giữa bên dưới
 	GotoXY(97,30);
 	cout<<static_cast<char>(193);
+	GotoXY(89,8);
+	cout<<"Tong so buoc da di";
 	
 	for(int i = 0; i <= 14; i++){
 	//vẽ đường chính giữa khung dưới

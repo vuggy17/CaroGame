@@ -3,7 +3,7 @@
 using namespace std;
 
 string name[5], str[2] = { ">>", "<<" };//2 dấu nháy lựa chọn options
-int count1 = 0, count2 = 0;
+int count1 = 1, count2 = 1, count3 = 1;
 
 int startScreen()
 {
@@ -124,13 +124,24 @@ int playScreen(){
                     case -1: //_TURN = true, người chơi 1
                         setColorPtr(_X, _Y, 1);
                         cout << player1.playerSymbol;
-                        // GotoXY(83,23);
-                        // cout<< player1.playerSymbo<<endl<<count1++;
-                        // GotoXY(_X,_Y);
+                        GotoXY(83,23);
+                        cout<< player1.playerSymbol;
+						GotoXY(83,24);
+						cout<<count1++;
+						GotoXY(97,9);
+						cout<<count3++;
+                        GotoXY(_X,_Y);
                         break;
                     case 1: //_TURN = false, người chơi 2
                         setColorPtr(_X, _Y, 1);
                         cout << player2.playerSymbol;
+						GotoXY(111,23);
+                        cout<< player2.playerSymbol;
+						GotoXY(111,24);
+						cout<<count2++;
+						GotoXY(97,9);
+						cout<<count3++;
+                        GotoXY(_X,_Y);
                         break;
                     case 0:
                         validEnter = false;
